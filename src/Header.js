@@ -6,7 +6,11 @@ export default (props) => {
     <>
       <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
 
-      <div className="header">renkunita</div>
+      
+
+        <div class="container">
+  <div class="box">renkunita</div>
+</div>
 
     </>
   );

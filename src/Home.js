@@ -11,13 +11,13 @@ export default (props) => {
 
       <div className="topimage">
           <img
-            //src="https://www.homepage-tukurikata.com/image/lion.jpg"
             src={topimage}
             alt="フリー画像"
           />
       </div>
 
-        <h1>Home</h1>
+      <h1>Home</h1>
+      
       </>
     );
   };

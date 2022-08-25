@@ -1,17 +1,22 @@
-.header {
-    top: 0px;
-    left: 0px;
+.container {
     width: 100%;
     height: 50px;
     position: fixed;
-    color: #666363;
-    background-color: #ffffffc4;
-    padding-left: 10px;
-    font-size: 34px;
     z-index: 10;
+    background-color: #ffffffd0;;
   }
   
-  /* Position and sizing of burger button */
+  .box {
+    width: 200px;
+    height: 50px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color:#666363;
+  }
+
+  /* Position and sizing of burger button */    
   .bm-burger-button {
     position: fixed;
     width: 36px;
