@@ -8,9 +8,9 @@ export default (props) => {
 
       
 
-        <div class="container">
-  <div class="box">renkunita</div>
-</div>
+      <div class="container">
+        <div class="box">renkunita</div>
+      </div>
 
     </>
   );

@@ -1,26 +1,26 @@
 .container {
     width: 100%;
-    height: 50px;
+    height: 40px;
     position: fixed;
     z-index: 10;
     background-color: #ffffffd0;;
   }
   
-  .box {
-    width: 200px;
-    height: 50px;
-    display: flex;
+.box {
+  width: 130px;
+  height: 40px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 20px;
   color:#666363;
   }
 
   /* Position and sizing of burger button */    
   .bm-burger-button {
     position: fixed;
-    width: 36px;
-    height: 30px;
+    width: 26px;
+    height: 20px;
     right: 10px;
     top: 10px;
     float: right;
@@ -28,7 +28,7 @@
   
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
-    background: #7e7b7b;
+    background: #706e6e;
   }
   
   /* Color/shape of burger icon bars on hover*/
@@ -53,13 +53,13 @@
   */
   .bm-menu-wrap {
     position: fixed;
-    height: 100%;
+    height: 50%;
     top: 0px;
   }
   
   /* General sidebar styles */
   .bm-menu {
-    background: #e5e6e9;
+    background: #ffffff;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
   }
