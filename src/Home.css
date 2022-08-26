@@ -8,7 +8,7 @@
 }
 
 .content {
-  width: min(100%,600px);
+  width: min(95%,600px);
   margin:0 auto;
   text-overflow: clip;
 
