@@ -35,7 +35,7 @@ export default (props) => {
         <div>
         <span className="dur">Sep 2020 - Sep 2020</span><br/>
           <b>Recruit Lifestyle Co., Ltd.</b><br/>
-          <span className="mgr">Software Engneer, Part-time</span>
+          <span className="mgr">Software Engineer, Part-time</span>
         </div>
       </ul>
 
