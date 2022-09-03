@@ -35,6 +35,7 @@ export default (props) => {
           <span className="mgr">Software Engineer, Part-time</span>
         </div>
       </ul>
+      <br/>
 
       <h2 className="title">Education</h2>
       <ul>
@@ -43,15 +44,24 @@ export default (props) => {
            The University of Tokyo - Tokyo, Japan<br/>
            M.S. in Department of Mechano-Informatics, School of Engineering
         </div>
-        <br/>
+        <br/> 
         <div>
         <span className="dur">Apr 2016 - Mar 2020</span><br/>
            The University of Tokyo - Tokyo, Japan<br/>
            B.S. in Department of Mechano-Informatics, Faculty of Engineering
         </div>
       </ul>
+      <br/>
+
+      <h2 className="title">License and certifications</h2>
+      <ul>
+        <div>
+        <span className="dur">Jun 2022</span><br/>
+           Applied Information Engineer Examination
+        </div>
+      </ul>
       </div> 
-            
+      
       </>
     );
   };
