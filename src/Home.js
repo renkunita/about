@@ -43,19 +43,14 @@ export default (props) => {
       <ul>
         <div>
         <span className="dur">Apr 2020 - Mar 2022</span><br/>
-        
            The University of Tokyo - Tokyo, Japan<br/>
            M.S. in Department of Mechano-Informatics, School of Engineering
-        
-        
         </div>
         <br/>
         <div>
         <span className="dur">Apr 2016 - Mar 2020</span><br/>
-        
            The University of Tokyo - Tokyo, Japan<br/>
            B.S. in Department of Mechano-Informatics, Faculty of Engineering
-        
         </div>
       </ul>
       </div> 
