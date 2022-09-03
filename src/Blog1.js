@@ -1,7 +1,5 @@
 import React from "react";
-import Header from "./Header";
 import topimage from "./image/mountains-190055.jpg";
-
 import CodeBlock from "./CodeBlock";
 
 export default (props) => {
@@ -36,8 +34,6 @@ npm run deploy
 
     return (
       <>
-      <Header />
-
       <div className="topimage">
           <img
             src={topimage}
