@@ -8,8 +8,8 @@ export default (props) => {
       <a className="menu-item" href="/about">
         Home
       </a>
-      <a className="menu-item" href="/about/page1">
-        page1
+      <a className="menu-item" href="/about/blog">
+        Blog
       </a>
     </Menu>
   );

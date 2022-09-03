@@ -17,6 +17,7 @@ export default (props) => {
       
       <div className="content">
       <h1>Blog</h1>
+      <a href="/about/blog/1">blog1</a>
       
       </div> 
       </>
