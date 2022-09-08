@@ -1,8 +1,22 @@
 .footerContainer {
     width: 100%;
-    height: 40px;
+    height: 100px;
     background-color: #ebe6e6;;
   }
+
+.footerBoxIcon {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerBoxIcon div {
+  margin-right: 10px;
+  margin-left: 10px;
+}
   
 .footerBox {
   width: 100%;
