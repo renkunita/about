@@ -1,5 +1,6 @@
 import React from "react";
 import topimage from "./image/mountains-190055.jpg";
+import Thumbnail from "./Thumbnail"
 
 
 export default (props) => {
@@ -14,7 +15,11 @@ export default (props) => {
       
       <div className="content">
       <h1>Blog</h1>
-      <a href="/about/blog/1">blog1</a>
+      <Thumbnail 
+      url="/about/blog/1"
+      title="GitHub PagesにReactをデプロイする"
+      date="2022/09/08"
+      />
       
       </div> 
       </>
