@@ -3,7 +3,7 @@ import topimage from "./image/mountains-190055.jpg";
 import CodeBlock from "./CodeBlock";
 
 export default (props) => {
-  const packageJson1 = `~~~js
+  const packageJson1 = `~~~json
     ...
     "homepage": "https://<GitHubアカウント名>.github.io/<GitHubリポジトリ名>/",
     ...
@@ -22,13 +22,13 @@ export default (props) => {
 `
 
 
-const markdown2 = `~~~js
-git remote add origin https://github.com/<GitHubアカウント名>/<GitHubリポジトリ名>.git
+const markdown2 = `~~~sh
+$ git remote add origin https://github.com/<GitHubアカウント名>/<GitHubリポジトリ名>.git
 ~~~
 `
 
-const markdown3 = `~~~js
-npm run deploy
+const markdown3 = `~~~sh
+$ npm run deploy
 ~~~
 `
 
@@ -47,12 +47,12 @@ npm run deploy
       <p>package.jsonに追記する</p>
       <CodeBlock md={packageJson1}/>
 
-      <p>リモートリポジトリの追加</p>
+      <p>リモートリポジトリの追加を行う</p>
       <CodeBlock md={markdown2}/>
 
-      <p>デプロイ</p>
+      <p>デプロイする</p>
       <CodeBlock md={markdown3}/>
-      <p>vimの編集画面が出るのでshift+zを二回打って終了させてgit commit</p>
+      <p>その後vimの編集画面が出るのでshift+zを二回打って終了させてgit commit, pushを行う</p>
 
       <br/>
 

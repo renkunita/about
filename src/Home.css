@@ -1,21 +1,19 @@
 .title {
-  
     padding: 0.25em 0.5em;/*上下 左右の余白*/
     color: #494949;/*文字色*/
     background: transparent;/*背景透明に*/
     border-left: solid 5px #7db4e6;/*左線*/
-  
 }
 
 .content {
-  width: min(95%,600px);
+  width: min(95%,800px);
   margin:0 auto;
   text-overflow: clip;
-
+  margin-bottom: 50px;
 }
 
 .mgr {
-  padding-left: 30px;
+  padding-left: 80px;
 }
 
 .dur {
