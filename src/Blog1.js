@@ -1,6 +1,7 @@
 import React from "react";
 import topimage from "./image/mountains-190055.jpg";
 import CodeBlock from "./CodeBlock";
+import "./BlogTemp.css"
 
 export default (props) => {
   const packageJson1 = `~~~json
@@ -43,6 +44,7 @@ $ npm run deploy
       
       <div className="content">
       <h1>GitHub PagesにReactをデプロイする</h1>
+      <p className="blogDate">2022/09/08</p>
       
       <p>package.jsonに追記する</p>
       <CodeBlock md={packageJson1}/>
