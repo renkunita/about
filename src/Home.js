@@ -1,9 +1,11 @@
 import React from "react";
 import "./Home.css";
 import topimage from "./image/mountains-190055.jpg";
-
+import usePageTracking from "./usePageTracking";
 
 export default (props) => {
+    usePageTracking();
+
     return (
       <>
       <div className="topimage">
