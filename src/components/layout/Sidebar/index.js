@@ -14,7 +14,6 @@ export default (props) => {
   return (
     <Menu 
       right 
-      onStateChange={handleStateChange}
       disableAutoFocus
       isOpen={props.isOpen}
       onStateChange={(state) => {
