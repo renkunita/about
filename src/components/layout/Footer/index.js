@@ -6,7 +6,7 @@ import { IconContext } from 'react-icons'
 
 
 
-export default (props) => {
+const Footer = (props) => {
   return (
     <>
       <div className={styles.footerContainer}>
@@ -23,3 +23,5 @@ export default (props) => {
     </>
   );
 };
+
+export default Footer;

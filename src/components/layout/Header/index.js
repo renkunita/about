@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "../Sidebar";
 import styles from "./Header.module.css";
 
-export default (props) => {
+const Header = (props) => {
   return (
     <>
       <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
@@ -14,3 +14,5 @@ export default (props) => {
     </>
   );
 };
+
+export default Header;

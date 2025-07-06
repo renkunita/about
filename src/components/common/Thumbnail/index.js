@@ -1,11 +1,11 @@
 import React from "react";
-import "./Thumbnail.css";
+import styles from "./Thumbnail.module.css";
 
 export default (props) => {
   const {url, title, date} = props;
   return (
     <>
-    <div className="thumbcontent">
+    <div className={styles.thumbcontent}>
       <a href={url}></a>
       <h1>{title}</h1>
       <p>{date}</p>

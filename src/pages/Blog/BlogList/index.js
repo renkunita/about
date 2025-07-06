@@ -1,7 +1,7 @@
 import React from "react";
 import { getPublishedPosts } from "../../../data/blog";
-import Thumbnail from "../../../components/common/Thumbnail";
-import "../../../pages/Home/Home.module.css";
+import { Thumbnail } from "../../../components";
+import "../../Home/Home.module.css";
 
 const BlogList = () => {
   const posts = getPublishedPosts();

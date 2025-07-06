@@ -1,5 +1,5 @@
 import React from "react";
-import CodeBlock from "../../../components/common/CodeBlock";
+import { CodeBlock } from "../../../components";
 import "../../Home/Home.module.css";
 import "../BlogPost/BlogPost.module.css";
 import usePageTracking from "../../../hooks/usePageTracking";

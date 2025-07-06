@@ -1,11 +1,7 @@
 import './App.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./pages/Home";
-import Blog from "./pages/Blog";
-import Blog1 from "./pages/Blog/Blog1";
-import BlogPost from "./pages/Blog/BlogPost";
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
+import { Home, Blog, Blog1, BlogPost } from "./pages";
+import { Header, Footer } from "./components";
 
 function App() {
   return (

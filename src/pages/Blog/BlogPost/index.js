@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { getPostById } from "./BlogData";
-import "./Home.css";
-import "./BlogPost.css";
-import usePageTracking from "./usePageTracking";
+import { getPostById } from "../../../data/blog";
+import "../../Home/Home.module.css";
+import "./BlogPost.module.css";
+import usePageTracking from "../../../hooks/usePageTracking";
 
 const BlogPost = () => {
   usePageTracking();

@@ -7,7 +7,7 @@ export default (props) => {
 
     return (
       <>
-      <div className="content">
+      <div className={styles.content}>
       <h1>About</h1>
       <p> I'm Ren Kunita.<br/>
         I am currently working as a software engineer at <a href="https://www.softbank.jp/">SoftBank Corp</a>.
@@ -19,58 +19,58 @@ export default (props) => {
       </p>
       <br/>
 
-      <h2 className="title">Experience</h2>
-      <div className="mgr">
+      <h2 className={styles.title}>Experience</h2>
+      <div className={styles.mgr}>
         <div>
-          <span className="dur">Apr 2022 - </span><br/>
+          <span className={styles.dur}>Apr 2022 - </span><br/>
           <b>SoftBank Corp.</b><br/>
           <span>*Software Engineer</span>
         </div>
         <br/>
         <div>
-        <span className="dur">Apr 2021 - Mar 2022</span><br/>
+        <span className={styles.dur}>Apr 2021 - Mar 2022</span><br/>
           <b>The University of Tokyo</b><br/>
           <span>*Research Assistant, Part-time</span>
         </div>
         <br/>
         <div>
-        <span className="dur">Sep 2020 - Sep 2020</span><br/>
+        <span className={styles.dur}>Sep 2020 - Sep 2020</span><br/>
           <b>Recruit Lifestyle Co., Ltd.</b><br/>
           <span>*Software Engineer, Part-time</span>
         </div>
       </div>
       <br/>
 
-      <h2 className="title">Education</h2>
-      <div className="mgr">
+      <h2 className={styles.title}>Education</h2>
+      <div className={styles.mgr}>
         <div>
-        <span className="dur">Apr 2020 - Mar 2022</span><br/>
+        <span className={styles.dur}>Apr 2020 - Mar 2022</span><br/>
            <b>The University of Tokyo - Tokyo, Japan</b><br/>
            M.S. in Department of Mechano-Informatics, School of Engineering
         </div>
         <br/> 
         <div>
-        <span className="dur">Apr 2016 - Mar 2020</span><br/>
+        <span className={styles.dur}>Apr 2016 - Mar 2020</span><br/>
            <b>The University of Tokyo - Tokyo, Japan</b><br/>
            B.S. in Department of Mechano-Informatics, Faculty of Engineering
         </div>
       </div>
       <br/>
 
-      <h2 className="title">License and certifications</h2>
-      <div className="mgr">
+      <h2 className={styles.title}>License and certifications</h2>
+      <div className={styles.mgr}>
         <div>
-        <span className="dur">Jun 2025</span><br/>
+        <span className={styles.dur}>Jun 2025</span><br/>
            <b>Microsoft Azure AI Engineer Associate (AI-102)</b>
         </div>
         <br/>
         <div>
-        <span className="dur">Sep 2024</span><br/>
+        <span className={styles.dur}>Sep 2024</span><br/>
            <b>Microsoft Azure Administrator Associate (AZ-104)</b>
         </div>
         <br/>
         <div>
-        <span className="dur">Jun 2022</span><br/>
+        <span className={styles.dur}>Jun 2022</span><br/>
            <b>Applied Information Engineer Examination</b>
         </div>
       </div>
