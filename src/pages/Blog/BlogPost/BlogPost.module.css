@@ -1,14 +1,14 @@
-.blog-post {
+.blogPost {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.post-header {
+.postHeader {
   margin-bottom: 3em;
   text-align: center;
 }
 
-.post-meta {
+.postMeta {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +17,7 @@
   border-bottom: 1px solid rgba(79, 195, 247, 0.2);
 }
 
-.back-link {
+.backLink {
   color: #4FC3F7;
   text-decoration: none;
   font-weight: 600;
@@ -31,12 +31,12 @@
   font-family: inherit;
 }
 
-.back-link:hover {
+.backLink:hover {
   background: rgba(79, 195, 247, 0.2);
   transform: translateX(-5px);
 }
 
-.post-date {
+.postDate {
   color: #4FC3F7;
   font-weight: 600;
   background: linear-gradient(135deg, rgba(79, 195, 247, 0.1) 0%, rgba(41, 182, 246, 0.1) 100%);

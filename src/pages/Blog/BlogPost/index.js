@@ -1,8 +1,8 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getPostById } from "../../../data/blog";
-import "../../Home/Home.module.css";
-import "./BlogPost.module.css";
+import homeStyles from "../../Home/Home.module.css";
+import blogStyles from "./BlogPost.module.css";
 import usePageTracking from "../../../hooks/usePageTracking";
 
 const BlogPost = () => {
@@ -10,41 +10,45 @@ const BlogPost = () => {
   const { id } = useParams();
   const post = getPostById(id);
 
+  const handleBackClick = () => {
+    window.location.href = '/about/blog';
+  };
+
   if (!post) {
     return (
-      <div className="content">
-        <div className="post-not-found">
+      <div className={homeStyles.content}>
+        <div className={blogStyles.postNotFound}>
           <h1>記事が見つかりません</h1>
           <p>指定された記事は存在しないか、削除された可能性があります。</p>
-          <Link to="/about/blog" className="back-to-blog">
+          <button onClick={handleBackClick} className={blogStyles.backToBlog}>
             ブログ一覧に戻る
-          </Link>
+          </button>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="content">
-      <article className="blog-post">
-        <header className="post-header">
-          <div className="post-meta">
-            <Link to="/about/blog" className="back-link">
+    <div className={homeStyles.content}>
+      <article className={blogStyles.blogPost}>
+        <header className={blogStyles.postHeader}>
+          <div className={blogStyles.postMeta}>
+            <button onClick={handleBackClick} className={blogStyles.backLink}>
               ← ブログ一覧に戻る
-            </Link>
-            <time className="post-date">{post.date}</time>
+            </button>
+            <time className={blogStyles.postDate}>{post.date}</time>
           </div>
-          <h1 className="post-title">{post.title}</h1>
+          <h1 className={blogStyles.postTitle}>{post.title}</h1>
           {post.tags && post.tags.length > 0 && (
-            <div className="post-tags">
+            <div className={blogStyles.postTags}>
               {post.tags.map(tag => (
-                <span key={tag} className="tag">{tag}</span>
+                <span key={tag} className={blogStyles.tag}>{tag}</span>
               ))}
             </div>
           )}
         </header>
         
-        <div className="post-content">
+        <div className={blogStyles.postContent}>
           {/* 実際の記事内容はここに動的に読み込む */}
           <p>記事の内容がここに表示されます。</p>
           <p>実際のプロジェクトでは、MarkdownファイルやCMSから内容を読み込みます。</p>
@@ -68,11 +72,11 @@ const BlogPost = () => {
           )}
         </div>
         
-        <footer className="post-footer">
-          <div className="post-navigation">
-            <Link to="/about/blog" className="nav-link">
+        <footer className={blogStyles.postFooter}>
+          <div className={blogStyles.postNavigation}>
+            <button onClick={handleBackClick} className={blogStyles.navLink}>
               ブログ一覧に戻る
-            </Link>
+            </button>
           </div>
         </footer>
       </article>
