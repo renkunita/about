@@ -7,8 +7,8 @@ export default (props) => {
     <>
       <Sidebar pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
 
-      <div class="headerContainer">
-        <div class="headerBox">renkunita</div>
+      <div className="headerContainer">
+        <a href="/about" className="headerBox">renkunita</a>
       </div>
 
     </>
