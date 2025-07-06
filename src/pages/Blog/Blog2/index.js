@@ -28,7 +28,7 @@ $ code react-minesweeper
               <button onClick={handleBackClick} className={blogStyles.backLink}>
                 ← ブログ一覧に戻る
               </button>
-              <time className={blogStyles.postDate}>2025/01/06</time>
+              <time className={blogStyles.postDate}>2025/07/06</time>
             </div>
             <h1 className={blogStyles.postTitle}>Claude CodeでReactマインスイーパーを改善した話</h1>
             <div className={blogStyles.postTags}>
