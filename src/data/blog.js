@@ -13,11 +13,11 @@ export const blogPosts = [
   },
   {
     id: 2,
-    title: "Claude CodeでReactマインスイーパーを開発した話",
+    title: "Claude CodeでReactマインスイーパーを改善した話",
     date: "2025/01/06",
     url: "/about/blog/2",
-    excerpt: "AI開発環境Claude Codeを使って、マインスイーパーゲームをゼロから作った開発体験をレポートします。",
-    tags: ["React", "Claude Code", "AI開発", "マインスイーパー"],
+    excerpt: "AI開発環境Claude Codeを使って、既存のマインスイーパーゲームを改善・機能追加した開発体験をレポートします。",
+    tags: ["React", "Claude Code", "AI開発", "マインスイーパー", "リファクタリング"],
     published: true
   }
 ];
