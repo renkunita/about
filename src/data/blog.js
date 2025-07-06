@@ -18,7 +18,8 @@ export const blogPosts = [
     url: "/about/blog/2",
     excerpt: "AI開発環境Claude Codeを使って、既存のマインスイーパーゲームを改善・機能追加した開発体験をレポートします。",
     tags: ["React", "Claude Code", "AI開発", "マインスイーパー", "リファクタリング"],
-    published: true
+    published: true,
+    hasCustomComponent: true // Blog2コンポーネントを使用
   }
 ];
 

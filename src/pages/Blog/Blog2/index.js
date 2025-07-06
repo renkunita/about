@@ -1,11 +1,13 @@
 import React from "react";
 import { CodeBlock } from "../../../components";
+import { getPostById } from "../../../data/blog";
 import homeStyles from "../../Home/Home.module.css";
 import blogStyles from "../BlogPost/BlogPost.module.css";
 import usePageTracking from "../../../hooks/usePageTracking";
 
 const Blog2 = (props) => {
   usePageTracking();
+  const post = getPostById(2); // ID 2の記事を取得
   
   const handleBackClick = () => {
     window.location.href = '/about/blog';
@@ -28,16 +30,16 @@ $ code react-minesweeper
               <button onClick={handleBackClick} className={blogStyles.backLink}>
                 ← ブログ一覧に戻る
               </button>
-              <time className={blogStyles.postDate}>2025/07/06</time>
+              <time className={blogStyles.postDate}>{post?.date}</time>
             </div>
-            <h1 className={blogStyles.postTitle}>Claude CodeでReactマインスイーパーを改善した話</h1>
-            <div className={blogStyles.postTags}>
-              <span className={blogStyles.tag}>React</span>
-              <span className={blogStyles.tag}>Claude Code</span>
-              <span className={blogStyles.tag}>AI開発</span>
-              <span className={blogStyles.tag}>マインスイーパー</span>
-              <span className={blogStyles.tag}>リファクタリング</span>
-            </div>
+            <h1 className={blogStyles.postTitle}>{post?.title}</h1>
+            {post?.tags && post.tags.length > 0 && (
+              <div className={blogStyles.postTags}>
+                {post.tags.map(tag => (
+                  <span key={tag} className={blogStyles.tag}>{tag}</span>
+                ))}
+              </div>
+            )}
           </header>
           
           <div className={blogStyles.postContent}>
