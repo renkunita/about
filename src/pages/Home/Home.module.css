@@ -210,6 +210,11 @@
     margin-bottom: 1em;
   }
   
+  .content h1::after {
+    width: 80px;
+    left: calc(50% - 40px);
+  }
+  
   .content p {
     font-size: 1em;
     line-height: 1.6;
@@ -261,6 +266,7 @@
   .content h1::after {
     width: 60px;
     height: 3px;
+    left: calc(50% - 30px);
   }
   
   .mgr {

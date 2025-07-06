@@ -1,12 +1,11 @@
 /* Position and sizing of burger button */    
 .bm-burger-button {
   position: fixed;
-  width: 30px;
-  height: 24px;
-  right: 20px;
-  top: 28px;
-  float: right;
-  z-index: 1000;
+  width: 28px;
+  height: 22px;
+  right: 15px;
+  top: 15px;
+  z-index: 1001;
 }
 
 /* Color/shape of burger icon bars */
@@ -27,8 +26,9 @@
 .bm-cross-button {
   height: 30px;
   width: 30px;
-  right: 20px;
-  top: 20px;
+  right: 15px;
+  top: 15px;
+  z-index: 1002;
 }
 
 /* Color/shape of close button cross */
@@ -44,18 +44,23 @@ Note: Beware of modifying this element as it can break the animations - you shou
 */
 .bm-menu-wrap {
   position: fixed;
-  height: 100%;
-  top: 0px;
-  right: 0px;
+  height: 100vh;
+  width: 280px;
+  top: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 /* General sidebar styles */
 .bm-menu {
   background: linear-gradient(135deg, #4FC3F7 0%, #29B6F6 100%);
-  padding: 4em 2em 2em;
-  font-size: 1.2em;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  padding: 4em 1.5em 2em;
+  font-size: 1.1em;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
+  height: 100vh;
+  width: 280px !important;
+  overflow-y: auto;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -109,6 +114,48 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Styling of overlay */
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .bm-burger-button {
+    width: 24px;
+    height: 18px;
+    right: 10px;
+    top: 10px;
+  }
+  
+  .bm-cross-button {
+    right: 10px;
+    top: 10px;
+  }
+  
+  .bm-menu-wrap {
+    width: 250px;
+  }
+  
+  .bm-menu {
+    width: 250px !important;
+    padding: 3em 1em 2em;
+    font-size: 1em;
+  }
+  
+  .bm-item {
+    padding: 0.8em 1em;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .bm-menu-wrap {
+    width: 220px;
+  }
+  
+  .bm-menu {
+    width: 220px !important;
+    padding: 3em 0.8em 2em;
+  }
 }
