@@ -1,26 +1,18 @@
 import React from "react";
-import topimage from "./image/mountains-190055.jpg";
-import Thumbnail from "./Thumbnail"
-
+import "./Home.css";
+import BlogList from "./BlogList";
+import usePageTracking from "./usePageTracking";
 
 export default (props) => {
+    usePageTracking();
+
     return (
       <>
-      <div className="topimage">
-          <img
-            src={topimage}
-            alt="フリー画像"
-          />
-      </div>
-      
       <div className="content">
-      <h1>Blog</h1>
-      <Thumbnail 
-      url="/about/blog/1"
-      title="GitHub PagesにReactをデプロイする"
-      date="2022/09/08"
-      />
-      
+        <h1>Blog</h1>
+        <p>Welcome to my blog where I share my thoughts and experiences about software development, technology, and more.</p>
+        
+        <BlogList />
       </div> 
       </>
     );
