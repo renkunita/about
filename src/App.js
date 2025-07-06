@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Home, Blog, Blog1, BlogPost } from "./pages";
+import { Home, Blog, Blog1, Blog2, BlogPost } from "./pages";
 import { Header, Footer } from "./components";
 
 function App() {
@@ -19,6 +19,9 @@ function App() {
         </Route>
         <Route path="/about/blog/1">
           <Blog1 />
+        </Route>
+        <Route path="/about/blog/2">
+          <Blog2 />
         </Route>
         <Route path="/about/blog/:id">
           <BlogPost />

@@ -53,7 +53,7 @@ const BlogPost = () => {
           <p>記事の内容がここに表示されます。</p>
           <p>実際のプロジェクトでは、MarkdownファイルやCMSから内容を読み込みます。</p>
           
-          {/* 例：GitHub Pagesデプロイ記事の内容 */}
+          {/* 記事ID別の内容表示 */}
           {post.id === 1 && (
             <div>
               <h2>はじめに</h2>
@@ -68,6 +68,13 @@ const BlogPost = () => {
               
               <h2>まとめ</h2>
               <p>GitHub Pagesを使うことで、簡単にReactアプリを公開できます。</p>
+            </div>
+          )}
+          
+          {post.id === 2 && (
+            <div>
+              <p>Claude CodeでReactマインスイーパーを開発した詳細な記事です。</p>
+              <p><a href="/about/blog/2" target="_blank" rel="noopener noreferrer">詳細記事を読む</a></p>
             </div>
           )}
         </div>

@@ -11,21 +11,22 @@ export const blogPosts = [
     tags: ["React", "GitHub Pages", "デプロイ"],
     published: true
   },
-  // 新しい記事を追加する場合のテンプレート
-  // {
-  //   id: 2,
-  //   title: "記事タイトル",
-  //   date: "YYYY/MM/DD",
-  //   url: "/about/blog/2",
-  //   excerpt: "記事の概要",
-  //   tags: ["タグ1", "タグ2"],
-  //   published: true
-  // }
+  {
+    id: 2,
+    title: "Claude CodeでReactマインスイーパーを開発した話",
+    date: "2025/01/06",
+    url: "/about/blog/2",
+    excerpt: "AI開発環境Claude Codeを使って、マインスイーパーゲームをゼロから作った開発体験をレポートします。",
+    tags: ["React", "Claude Code", "AI開発", "マインスイーパー"],
+    published: true
+  }
 ];
 
-// 公開済みの記事のみを取得
+// 公開済みの記事のみを取得（日付降順）
 export const getPublishedPosts = () => {
-  return blogPosts.filter(post => post.published);
+  return blogPosts
+    .filter(post => post.published)
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
 };
 
 // IDで特定の記事を取得
