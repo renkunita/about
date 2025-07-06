@@ -1,10 +1,10 @@
 import React from "react";
 import { CodeBlock } from "../../../components";
-import "../../Home/Home.module.css";
-import "../BlogPost/BlogPost.module.css";
+import homeStyles from "../../Home/Home.module.css";
+import blogStyles from "../BlogPost/BlogPost.module.css";
 import usePageTracking from "../../../hooks/usePageTracking";
 
-export default (props) => {
+const Blog1 = (props) => {
   usePageTracking();
   
   const handleBackClick = () => {
@@ -41,24 +41,24 @@ $ npm run deploy
 
     return (
       <>
-      <div className="content">
-        <article className="blog-post">
-          <header className="post-header">
-            <div className="post-meta">
-              <button onClick={handleBackClick} className="back-link">
+      <div className={homeStyles.content}>
+        <article className={blogStyles.blogPost}>
+          <header className={blogStyles.postHeader}>
+            <div className={blogStyles.postMeta}>
+              <button onClick={handleBackClick} className={blogStyles.backLink}>
                 ← ブログ一覧に戻る
               </button>
-              <time className="post-date">2022/09/08</time>
+              <time className={blogStyles.postDate}>2022/09/08</time>
             </div>
-            <h1 className="post-title">GitHub PagesにReactをデプロイする</h1>
-            <div className="post-tags">
-              <span className="tag">React</span>
-              <span className="tag">GitHub Pages</span>
-              <span className="tag">デプロイ</span>
+            <h1 className={blogStyles.postTitle}>GitHub PagesにReactをデプロイする</h1>
+            <div className={blogStyles.postTags}>
+              <span className={blogStyles.tag}>React</span>
+              <span className={blogStyles.tag}>GitHub Pages</span>
+              <span className={blogStyles.tag}>デプロイ</span>
             </div>
           </header>
           
-          <div className="post-content">
+          <div className={blogStyles.postContent}>
             <p>ReactアプリをGitHub Pagesにデプロイする手順を詳しく説明します。</p>
             
             <h2>1. package.jsonの設定</h2>
@@ -81,9 +81,9 @@ $ npm run deploy
             </ul>
           </div>
           
-          <footer className="post-footer">
-            <div className="post-navigation">
-              <button onClick={handleBackClick} className="nav-link">
+          <footer className={blogStyles.postFooter}>
+            <div className={blogStyles.postNavigation}>
+              <button onClick={handleBackClick} className={blogStyles.navLink}>
                 ブログ一覧に戻る
               </button>
             </div>
@@ -92,5 +92,7 @@ $ npm run deploy
       </div> 
       </>
     );
-  };
+};
+
+export default Blog1;
   
