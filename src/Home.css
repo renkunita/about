@@ -1,50 +1,282 @@
 .title {
-    padding: 0.25em 0.5em;/*上下 左右の余白*/
-    color: #494949;/*文字色*/
-    background: transparent;/*背景透明に*/
-    border-left: solid 5px #7db4e6;/*左線*/
+    padding: 1em 1.5em;
+    color: #333;
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.1) 0%, rgba(41, 182, 246, 0.1) 100%);
+    border-left: solid 5px;
+    border-image: linear-gradient(135deg, #4FC3F7 0%, #29B6F6 100%) 1;
+    border-radius: 0 15px 15px 0;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 2em 0 1em 0;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: slideInUp 1s ease-out 0.8s both;
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.05) 0%, rgba(41, 182, 246, 0.05) 100%);
+    border-radius: 0 15px 15px 0;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.title:hover::before {
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.15) 0%, rgba(41, 182, 246, 0.15) 100%);
+}
+
+.title:hover {
+    transform: translateX(5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(79, 195, 247, 0.2);
 }
 
 .content {
-  width: min(95%,800px);
-  margin:0 auto;
+  width: min(95%, 900px);
+  margin: 2em auto;
   text-overflow: clip;
   margin-bottom: 50px;
+  padding: 3em 2em;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(79, 195, 247, 0.03) 0%, rgba(41, 182, 246, 0.03) 100%);
+  z-index: -1;
+}
+
+.content h1 {
+  font-size: 3em;
+  font-weight: 800;
+  background: linear-gradient(135deg, #4FC3F7 0%, #29B6F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5em;
+  text-align: center;
+  position: relative;
+  animation: slideInUp 1s ease-out 0.3s both;
+}
+
+.content h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, #4FC3F7 0%, #29B6F6 100%);
+  border-radius: 2px;
+  animation: slideInUp 1.2s ease-out 0.5s both;
+}
+
+.content p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 2em;
+  text-align: justify;
+  animation: slideInUp 1s ease-out 0.6s both;
+}
+
+.content a {
+  color: #4FC3F7;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.content a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #4FC3F7 0%, #29B6F6 100%);
+  transition: width 0.3s ease;
+}
+
+.content a:hover::after {
+  width: 100%;
+}
+
+.content a:hover {
+  color: #29B6F6;
 }
 
 .mgr {
-  padding-left: 65px;
+  padding-left: 2em;
+  margin-top: 2em;
+}
+
+.mgr > div {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1.5em;
+  border-radius: 15px;
+  margin-bottom: 1.5em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: slideInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.mgr > div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #4FC3F7 0%, #29B6F6 100%);
+  transition: width 0.3s ease;
+}
+
+.mgr > div:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mgr > div:hover::before {
+  width: 8px;
+}
+
+.mgr b {
+  font-size: 1.2em;
+  color: #333;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.mgr span:not(.dur) {
+  color: #666;
+  font-style: italic;
+  font-size: 1.05em;
 }
 
 .dur {
-  color: #817f7f;
+  color: #4FC3F7;
+  font-weight: 600;
+  font-size: 0.95em;
+  background: linear-gradient(135deg, rgba(79, 195, 247, 0.1) 0%, rgba(41, 182, 246, 0.1) 100%);
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 0.5em;
+  font-family: 'Inter', monospace;
+  letter-spacing: 0.5px;
 }
 
-.topimage {
-    /*親div*/
-    position: relative; /*相対配置*/
+
+.blog-posts {
+  margin-top: 3em;
+}
+
+.mgr > div:nth-child(1) { animation-delay: 0.1s; }
+.mgr > div:nth-child(2) { animation-delay: 0.2s; }
+.mgr > div:nth-child(3) { animation-delay: 0.3s; }
+.mgr > div:nth-child(4) { animation-delay: 0.4s; }
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1.5em 1em;
+    margin: 0.5em;
+    border-radius: 15px;
   }
   
-  .topimage p {
-    position: absolute; /*絶対配置*/
-    z-index: 1;
-    color: rgba(255, 255, 255, 0.8);
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 0;
-    /* background: skyblue; */
-    font-weight: bold; /*太字に*/
-    font-size: 2em;
-    font-family: Quicksand, sans-serif; /*Google Font*/
+  .content h1 {
+    font-size: 2.2em;
+    margin-bottom: 1em;
   }
   
-  .topimage img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    /* position: "static"; */
+  .content p {
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: left;
   }
+  
+  .mgr {
+    padding-left: 0.5em;
+    margin-top: 1.5em;
+  }
+  
+  .mgr > div {
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 12px;
+  }
+  
+  .mgr b {
+    font-size: 1.1em;
+  }
+  
+  .mgr span:not(.dur) {
+    font-size: 0.95em;
+  }
+  
+  .title {
+    padding: 0.8em 1em;
+    font-size: 1.2em;
+    margin: 1.5em 0 0.8em 0;
+    border-radius: 0 12px 12px 0;
+  }
+  
+  .dur {
+    font-size: 0.85em;
+    padding: 0.25em 0.6em;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 1em 0.8em;
+    margin: 0.25em;
+  }
+  
+  .content h1 {
+    font-size: 1.8em;
+  }
+  
+  .content h1::after {
+    width: 60px;
+    height: 3px;
+  }
+  
+  .mgr {
+    padding-left: 0;
+  }
+  
+  .mgr > div {
+    padding: 0.8em;
+  }
+  
+  .mgr > div:hover {
+    transform: translateX(5px);
+  }
+  
+  .title {
+    font-size: 1.1em;
+    padding: 0.6em 0.8em;
+  }
+}

@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-import topimage from "./image/mountains-190055.jpg";
 import usePageTracking from "./usePageTracking";
 
 export default (props) => {
@@ -8,13 +7,6 @@ export default (props) => {
 
     return (
       <>
-      <div className="topimage">
-          <img
-            src={topimage}
-            alt="フリー画像"
-          />
-      </div>
-      
       <div className="content">
       <h1>About</h1>
       <p> I'm Ren Kunita.<br/>
@@ -67,6 +59,16 @@ export default (props) => {
 
       <h2 className="title">License and certifications</h2>
       <div className="mgr">
+        <div>
+        <span className="dur">Jun 2025</span><br/>
+           <b>Microsoft Azure AI Engineer Associate (AI-102)</b>
+        </div>
+        <br/>
+        <div>
+        <span className="dur">Sep 2024</span><br/>
+           <b>Microsoft Azure Administrator Associate (AZ-104)</b>
+        </div>
+        <br/>
         <div>
         <span className="dur">Jun 2022</span><br/>
            <b>Applied Information Engineer Examination</b>
