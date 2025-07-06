@@ -9,15 +9,15 @@ import { IconContext } from 'react-icons'
 export default (props) => {
   return (
     <>
-      <div class="footerContainer">
-      <div class="footerBoxIcon">
-        <IconContext.Provider value={{ color: '#000', size: '40px' }}>
+      <div className="footerContainer">
+      <div className="footerBoxIcon">
+        <IconContext.Provider value={{ color: 'rgba(255, 255, 255, 0.9)', size: '40px' }}>
         <div><a href="mailto:renkunita0018@gmail.com"><FiMail /></a></div>
         <div><a href="https://github.com/renkunita"><FaGithub /></a></div>
         <div><a href="https://www.linkedin.com/in/ren-kunita-b1544b248/"><FaLinkedin /></a></div>
         </IconContext.Provider>
       </div>
-      <div class="footerBox">&copy; 2022 Ren Kunita</div>
+      <div className="footerBox">&copy; 2025 Ren Kunita</div>
       </div>
       
     </>
