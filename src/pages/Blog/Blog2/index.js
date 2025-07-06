@@ -12,10 +12,10 @@ const Blog2 = (props) => {
   };
   
   const setupCode = `~~~bash
-# プロジェクトセットアップ
-$ npx create-react-app react-minesweeper
-$ cd react-minesweeper
-$ npm start
+# 既存プロジェクトをClaude Codeで分析
+$ code react-minesweeper
+# VSCodeでClaude拡張機能を有効化
+# プロジェクト全体の構造とコードを確認
 ~~~`;
 
 
@@ -47,7 +47,7 @@ $ npm start
             <p>Claude CodeはAnthropic社が提供するAI開発環境で、自然言語でコードの作成・修正・デバッグができるツールです。ターミナルから直接使用でき、ファイルの読み書きやコマンド実行も可能で、まるでAIエンジニアと一緒に開発しているような体験ができます。</p>
             
             <h2>既存プロジェクトの分析</h2>
-            <p>まずは既存のマインスイーパープロジェクトをClaude Codeに分析してもらいました：</p>
+            <p>まずは既存のマインスイーパープロジェクトをVSCodeのClaude拡張機能で分析してもらいました：</p>
             <CodeBlock md={setupCode}/>
             
             <h2>改善作業で感じたClaude Codeの魅力</h2>
