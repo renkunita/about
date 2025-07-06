@@ -1,14 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Home.module.css";
 import usePageTracking from "../../hooks/usePageTracking";
+import { scrollToSection, handleResize } from "../../utils/scrollUtils";
 
 export default (props) => {
     usePageTracking();
 
+    useEffect(() => {
+      // URLのハッシュに基づいてスクロール位置を調整
+      const hash = window.location.hash;
+      if (hash) {
+        const elementId = hash.substring(1);
+        setTimeout(() => {
+          scrollToSection(elementId);
+        }, 100);
+      }
+
+      // リサイズ時のハンドラーを設定
+      const cleanupResize = handleResize(() => {
+        // リサイズ後にハッシュがある場合は再スクロール
+        const currentHash = window.location.hash;
+        if (currentHash) {
+          const elementId = currentHash.substring(1);
+          scrollToSection(elementId);
+        }
+      });
+
+      return cleanupResize;
+    }, []);
+
+    // セクションへのスクロール関数をグローバルに公開
+    useEffect(() => {
+      window.scrollToSection = scrollToSection;
+    }, []);
+
     return (
       <>
       <div className={styles.content}>
-      <h1>About</h1>
+      <h1 id="about">About</h1>
       <p> I'm Ren Kunita.<br/>
         I am currently working as a software engineer at <a href="https://www.softbank.jp/">SoftBank Corp</a>.
         I am involved in mobile applications and IoT product projects developing front-end and back-end applications.
@@ -19,7 +48,7 @@ export default (props) => {
       </p>
       <br/>
 
-      <h2 className={styles.title}>Experience</h2>
+      <h2 id="experience" className={styles.title}>Experience</h2>
       <div className={styles.mgr}>
         <div>
           <span className={styles.dur}>Apr 2022 - </span><br/>
@@ -41,7 +70,7 @@ export default (props) => {
       </div>
       <br/>
 
-      <h2 className={styles.title}>Education</h2>
+      <h2 id="education" className={styles.title}>Education</h2>
       <div className={styles.mgr}>
         <div>
         <span className={styles.dur}>Apr 2020 - Mar 2022</span><br/>
@@ -57,7 +86,7 @@ export default (props) => {
       </div>
       <br/>
 
-      <h2 className={styles.title}>License and certifications</h2>
+      <h2 id="certifications" className={styles.title}>License and certifications</h2>
       <div className={styles.mgr}>
         <div>
         <span className={styles.dur}>Jun 2025</span><br/>

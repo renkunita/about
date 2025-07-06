@@ -16,6 +16,15 @@ export default (props) => {
       right 
       onStateChange={handleStateChange}
       disableAutoFocus
+      isOpen={props.isOpen}
+      onStateChange={(state) => {
+        handleStateChange(state);
+        if (props.onStateChange) {
+          props.onStateChange(state);
+        }
+      }}
+      customBurgerIcon={false}
+      customCrossIcon={false}
     >
       <a className="menu-item" href="/about">
         Home
