@@ -1,8 +1,8 @@
 import React from "react";
-import CodeBlock from "./CodeBlock";
-import "./Home.css";
-import "./BlogPost.css";
-import usePageTracking from "./usePageTracking";
+import CodeBlock from "../../../components/common/CodeBlock";
+import "../../Home/Home.module.css";
+import "../BlogPost/BlogPost.module.css";
+import usePageTracking from "../../../hooks/usePageTracking";
 
 export default (props) => {
   usePageTracking();

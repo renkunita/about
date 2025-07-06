@@ -1,11 +1,11 @@
 import './App.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./Home";
-import Blog from "./Blog";
-import Blog1 from "./Blog1";
-import BlogPost from "./BlogPost";
-import Header from "./Header";
-import Footer from "./Footer";
+import Home from "./pages/Home";
+import Blog from "./pages/Blog";
+import Blog1 from "./pages/Blog/Blog1";
+import BlogPost from "./pages/Blog/BlogPost";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import "./Home.css";
+import "../../pages/Home/Home.module.css";
 import BlogList from "./BlogList";
-import usePageTracking from "./usePageTracking";
+import usePageTracking from "../../hooks/usePageTracking";
 
 export default (props) => {
     usePageTracking();

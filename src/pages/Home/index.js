@@ -1,6 +1,6 @@
 import React from "react";
-import "./Home.css";
-import usePageTracking from "./usePageTracking";
+import styles from "./Home.module.css";
+import usePageTracking from "../../hooks/usePageTracking";
 
 export default (props) => {
     usePageTracking();
