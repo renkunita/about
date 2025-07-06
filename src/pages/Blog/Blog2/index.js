@@ -18,43 +18,6 @@ $ cd react-minesweeper
 $ npm start
 ~~~`;
 
-  const gameStateCode = `~~~javascript
-// ゲーム状態の管理
-const [board, setBoard] = useState([]);
-const [gameStatus, setGameStatus] = useState('playing'); // 'playing', 'won', 'lost'
-const [mineCount, setMineCount] = useState(10);
-const [firstClick, setFirstClick] = useState(true);
-~~~`;
-
-  const cellLogicCode = `~~~javascript
-// セルクリック時の処理
-const handleCellClick = (row, col) => {
-  if (gameStatus !== 'playing') return;
-  
-  const newBoard = [...board];
-  const cell = newBoard[row][col];
-  
-  if (cell.isFlagged || cell.isRevealed) return;
-  
-  if (cell.isMine) {
-    // ゲームオーバー
-    setGameStatus('lost');
-    revealAllMines(newBoard);
-  } else {
-    // セルを開く（連鎖処理含む）
-    revealCell(newBoard, row, col);
-    checkWinCondition(newBoard);
-  }
-  
-  setBoard(newBoard);
-};
-~~~`;
-
-  const deployCode = `~~~bash
-# GitHub Pagesへのデプロイ
-$ npm run build
-$ gh-pages -d build
-~~~`;
 
     return (
       <>
@@ -87,33 +50,6 @@ $ gh-pages -d build
             <p>まずは既存のマインスイーパープロジェクトをClaude Codeに分析してもらいました：</p>
             <CodeBlock md={setupCode}/>
             
-            <h2>改善ポイントをAIと特定</h2>
-            <p>「このマインスイーパーをより良くしたい」と相談すると、Claude Codeは以下のような改善点を提案してくれました：</p>
-            <ul>
-              <li><strong>UI/UXの改善</strong>：より直感的で現代的なデザイン</li>
-              <li><strong>パフォーマンス最適化</strong>：React.memoやuseMemoの活用</li>
-              <li><strong>アクセシビリティ向上</strong>：キーボード操作対応</li>
-              <li><strong>機能拡張</strong>：難易度選択、統計機能の追加</li>
-              <li><strong>コード品質向上</strong>：TypeScript化、テスト追加</li>
-            </ul>
-            
-            <h2>段階的な改善プロセス</h2>
-            <p>既存のゲーム状態管理を、Claude Codeと一緒により効率的な形に改良しました：</p>
-            <CodeBlock md={gameStateCode}/>
-            
-            <h3>リファクタリングのポイント</h3>
-            <p>既存のセルクリック処理を見直し、Claude Codeと一緒にパフォーマンスを向上させました：</p>
-            <CodeBlock md={cellLogicCode}/>
-            
-            <h2>デザイン改善のこだわり</h2>
-            <p>既存のシンプルなデザインを、Claude Codeと一緒により洗練されたものに改良しました：</p>
-            <ul>
-              <li><strong>ニューモーフィズムデザイン</strong>：平面的だったボタンを立体的で現代的な見た目に</li>
-              <li><strong>カラーコーディング強化</strong>：数字ごとの色分けをより鮮明に改善</li>
-              <li><strong>アニメーション追加</strong>：セルクリック時の滑らかな遷移効果を新規実装</li>
-              <li><strong>レスポンシブ対応強化</strong>：既存のモバイル対応をより快適に改良</li>
-            </ul>
-            
             <h2>改善作業で感じたClaude Codeの魅力</h2>
             
             <h3>1. 既存コードの深い理解</h3>
@@ -124,10 +60,6 @@ $ gh-pages -d build
             
             <h3>3. レガシーコード改善の手助け</h3>
             <p>「この古い書き方を現代的にしたい」という相談では、React Hooksへの移行や、最新のベストプラクティスに沿った改善を具体的にサポートしてくれました。</p>
-            
-            <h2>改善版のデプロイ</h2>
-            <p>改善作業完了後、既存のGitHub Pagesを更新しました：</p>
-            <CodeBlock md={deployCode}/>
             
             <h2>改善されたゲームで遊んでみる</h2>
             <p>改善されたマインスイーパーは以下のURLで実際にプレイできます：</p>
